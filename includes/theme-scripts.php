@@ -16,7 +16,7 @@ if ( ! function_exists( 'dentistry_fonts_url' ) ) :
 			$dentistry_font_families = array();
 
 			if ( 'off' !== $dentistry_font_google ) {
-				$dentistry_font_families[] = 'Roboto Slab:400,500,600,700';
+				$dentistry_font_families[] = 'Roboto Condensed:400,700';
 			}
 
 			$dentistry_query_args = array(

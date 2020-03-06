@@ -1,7 +1,7 @@
 .element-product-carousel {
   .name-cate-product {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 10px 70px 10px 10px;
     background-color: $background-primary;
 
@@ -59,7 +59,7 @@
         display: block;
         font-size: 18px;
         color: $color-link;
-        font-weight: 600;
+        font-weight: 700;
 
         del {
           color: $color-primary;
@@ -71,7 +71,6 @@
     .product-add-to-cart {
       a {
         font-size: 12px;
-        font-weight: 500;
         text-transform: uppercase;
         padding: 10px 20px;
         display: inline-block;
