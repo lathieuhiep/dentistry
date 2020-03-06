@@ -1,0 +1,66 @@
+form {
+  &.wpcf7-form {
+    br {
+      display: none;
+    }
+    p {
+      position: relative;
+      margin: 0;
+
+      span {
+        &.ajax-loader {
+          position: absolute;
+          top: 8px;
+        }
+      }
+    }
+    label {
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    span {
+      &.required {
+        color: $color-hover;
+      }
+      &.wpcf7-form-control-wrap {
+        display: block;
+        margin-bottom: 15px;
+
+        input {
+          height: auto;
+        }
+        input,
+        textarea {
+          display: block;
+          width: 100%;
+          padding: 7px 20px 6px;
+          border: 1px solid $border-color;
+          @include border-radius(4px);
+          background-color: #ffffff;
+
+          &:focus {
+            border-color: $background-primary;
+          }
+        }
+        textarea {
+          height: 150px;
+        }
+      }
+    }
+    .wpcf7-submit {
+      color: #fff;
+      padding: 8px 20px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      @include border-radius(4px);
+      background: $background-primary;
+      @include transition(all 0.4s ease-in-out);
+
+      &:hover {
+        background-color: $background-hover;
+      }
+    }
+  }
+}

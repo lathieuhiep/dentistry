@@ -1,0 +1,112 @@
+/*
+Theme Name: Dentistry
+Theme URI: https://lahavietnam.com/
+Author: LaHaVietNam
+Author URI: https://www.facebook.com/lahaco.vn/
+Version: 1.0.0
+Description: Website thiết bị nha khoa
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, three-columns, four-columns, right-sidebar,  theme-options
+Text Domain: dentistry
+*/
+
+/**
+* Table of Contents:
+*
+# General
+# WordPress Core
+# Header
+  ## Information
+  ## Search Form Product
+# Navigation
+  ## Nav Top
+# Page
+# Sidebar
+# Blog
+  ## Single
+  ## Pagination
+  ## Comment
+# Elementor
+  ## Slider
+  ## Posts Grid
+  ## Posts Carousel
+  ## List Categories Product
+  ## Text Box
+  ## Testimonial
+  ## Product Carousel
+  ## Best Selling Products
+  ## Product Brands
+  ## Contact Us
+# Woocommerce
+# Contact Form 7
+# Footer
+# Responsive
+* -----------------------------------------------------------------------------
+*/
+
+@import "variables-site/variables";
+
+/**
+# General
+-----------------------------------------------------------------------------*/
+@import "general";
+
+/* WordPress Core
+-------------------------------------------------------------- */
+@import "wp-core";
+
+/**
+# Header
+-----------------------------------------------------------------------------*/
+@import "header/header";
+
+/**
+# Navigation
+-----------------------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/**
+# Page
+-----------------------------------------------------------------------------*/
+@import "page";
+
+/**
+# Sidebar
+-----------------------------------------------------------------------------*/
+@import "sidebar";
+
+/**
+# Blog
+-----------------------------------------------------------------------------*/
+@import "blog/blog";
+
+/**
+# Elementor
+-----------------------------------------------------------------------------*/
+@import "elementor/elementor";
+
+/**
+# Woocommerce
+-----------------------------------------------------------------------------*/
+@import "shop";
+
+/**
+# Contact Form 7
+-----------------------------------------------------------------------------*/
+@import "cf7";
+
+/**
+# 404
+-----------------------------------------------------------------------------*/
+@import "404";
+
+/**
+# Footer
+-----------------------------------------------------------------------------*/
+@import "footer/footer";
+
+/**
+# Responsive
+-----------------------------------------------------------------------------*/
+@import "responsive";

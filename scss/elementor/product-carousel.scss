@@ -1,0 +1,113 @@
+.element-product-carousel {
+  .name-cate-product {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 70px 10px 10px;
+    background-color: $background-primary;
+
+    a {
+      color: #ffffff;
+      padding: 6px 15px;
+      display: inline-block;
+      background-color: $background-hover;
+      @include border-radius(4px);
+    }
+  }
+  .item-product {
+    padding: 0 5px 40px 5px;
+    border: 1px solid transparent;
+    @include border-radius(4px);
+    @include transition(all 0.4s ease-in-out);
+
+    &:hover {
+      border-color: $background-primary;
+
+      .product-add-to-cart {
+        a {
+          &:hover {
+            color: #ffffff;
+            border-color: $background-primary;
+            background-color: $background-primary;
+          }
+        }
+      }
+    }
+    .img-product {
+      position: relative;
+      margin-bottom: 30px;
+      overflow: hidden;
+
+      .onsale {
+        position: absolute;
+        top: 8px;
+        left: -30px;
+        color: #ffffff;
+        text-align: center;
+        width: 110px;
+        background-color: $background-primary;
+        @include transform(rotate(-45deg));
+      }
+    }
+    .title-product {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .product-price {
+      margin-bottom: 30px;
+
+      .price {
+        display: block;
+        font-size: 18px;
+        color: $color-link;
+        font-weight: 600;
+
+        del {
+          color: $color-primary;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+    .product-add-to-cart {
+      a {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        display: inline-block;
+        background-color: transparent;
+        border: 1px solid $border-color;
+        @include border-radius(4px);
+
+        &.added_to_cart {
+          margin-top: 15px;
+        }
+        &.button {
+          &:after {
+            top: 11px;
+            right: 3px;
+          }
+        }
+      }
+    }
+  }
+  .owl-carousel {
+    &.owl-theme {
+      .owl-nav {
+        position: absolute;
+        top: -50px;
+        right: 15px;
+        margin: 0;
+
+        button {
+          background-color: transparent;
+
+          &:hover {
+            color: $color-link;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

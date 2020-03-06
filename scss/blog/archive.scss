@@ -1,0 +1,123 @@
+.site-post-item {
+  margin-bottom: 30px;
+  @include flexbox();
+  @include flex-direction(column);
+
+  .site-post-content {
+    padding: 20px;
+    border: 1px solid $border-color;
+    @include border-radius(4px);
+    @include flex(1 auto);
+    @include transition(all 0.4s ease-in-out);
+
+    &:hover {
+      border-color: $background-primary;
+
+      .site-post-image {
+        a {
+          &:before {
+            opacity: 1;
+            @include transform(scale(1));
+          }
+        }
+      }
+    }
+  }
+  .site-post-image {
+    margin-bottom: 15px;
+
+    a {
+      position: relative;
+      display: block;
+
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        background-image: url("images/icon-plus.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: rgba(0,0,0,0.5);
+        @include transform(scale(0));
+        @include transition(all 0.4s ease-in-out);
+      }
+    }
+  }
+  .entry-meta {
+    margin-bottom: 15px;
+
+    span {
+      color: $color-link;
+      font-weight: 600;
+
+      &.post-day {
+        font-size: 36px;
+      }
+    }
+  }
+}
+.site-post-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+
+  a {
+    color: $color-title;
+
+    i {
+      margin-right: 5px;
+      color: $color-hover;
+    }
+    &:hover {
+      color: $color-hover;
+    }
+  }
+}
+.site-post-excerpt {
+  margin-bottom: 10px;
+
+  ul {
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  table {
+    margin-bottom: 30px;
+    width: 100%;
+    tr {
+      border-bottom: 1px solid $border-color;
+
+      th {
+        padding: 10px 20px 10px 0;
+      }
+    }
+  }
+  dd {
+    margin: 0 0 20px;
+  }
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+.page-links {
+  font-weight: $font-weight-bold;
+
+  a {
+    display: inline-block;
+
+    span {
+      display: inline-block;
+      padding: 0 5px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.element-testimonial {
+  .custom-owl-carousel {
+    padding: 34px 22px 40px;
+
+    .item {
+      .avatar {
+        margin-bottom: 5px;
+        display: inline-block;
+        width: 80px;
+      }
+      .name {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .item-content {
+        position: relative;
+        padding: 0 15px;
+
+        &:before,
+        &:after {
+          position: absolute;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: #eeeeee;
+        }
+        &:before {
+          content: "\f10d";
+          top: -5px;
+          left: 0;
+        }
+        &:after {
+          content: "\f10e";
+          bottom: -3px;
+          right: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.element-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.element-box-global {
+  overflow: hidden;
+  border: 1px solid $border-color;
+  @include border-radius(4px);
+}
+.item-post__title {
+  font-size: 18px;
+  word-break: break-word;
+
+  a {
+    display: inline-block;
+  }
+}
+.elementor-widget {
+  .elementor-widget-container {
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .tagcloud {
+      a {
+        display: inline-block;
+        padding: 5px 15px;
+        margin-bottom: 5px;
+        font-size: 13px !important;
+        border: 1px solid $border-color;
+        @include border-radius(4px);
+
+        &:hover {
+          color: #ffffff;
+          background-color: $background-primary;
+        }
+      }
+    }
+  }
+}
+/* Slider */
+@import "slides";
+
+/* Posts Grid */
+@import "post-grid";
+
+/* Posts Carousel */
+@import "post-carousel";
+
+/* List Categories Product */
+@import "list-categories-product";
+
+/* Text Box */
+@import "text-box";
+
+/* Testimonial */
+@import "testimonial";
+
+/* Product Carousel */
+@import "product-carousel";
+
+/* Best Selling Products */
+@import "best-selling-products";
+
+/* Product Brands */
+@import "product-brands";
+
+/* Contact Us */
+@import "contact-us";

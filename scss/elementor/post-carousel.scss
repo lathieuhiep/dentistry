@@ -1,0 +1,79 @@
+.element-post-carousel {
+  .title-heading {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-right: 60px;
+  }
+  .item-post {
+    padding: 20px;
+    border: 1px solid $border-color;
+    @include border-radius(4px);
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex(1);
+
+    .item-post__thumbnail {
+      margin-bottom: 20px;
+    }
+    .item-post_content {
+      @include flexbox();
+      @include flex-direction(column);
+      @include flex(1);
+
+      .entry-meta {
+        margin-bottom: 10px;
+
+        span {
+          color: $color-link;
+          display: inline-block;
+
+          &.post-day {
+            font-size: 30px;
+            font-weight: 700;
+          }
+          &.post-my {
+            font-weight: 600;
+          }
+        }
+      }
+      .item-post__title {
+        font-size: 16px;
+      }
+      .item-post__desc {
+        margin-bottom: 12px;
+        @include flex(1);
+      }
+      .entry-bottom {
+        .read-more {
+          color: $color-link;
+
+          &:hover {
+            color: $color-title;
+          }
+        }
+      }
+    }
+  }
+  .owl-carousel {
+    &.owl-theme {
+      .owl-nav {
+        position: absolute;
+        top: -36px;
+        right: 0;
+        margin: 0;
+
+        button {
+          color: #555555;
+          padding: 0 !important;
+          background-color: #f5f5f5;
+
+          &:hover {
+            color: #ffffff;
+            background-color: $background-primary;
+          }
+        }
+      }
+    }
+  }
+}

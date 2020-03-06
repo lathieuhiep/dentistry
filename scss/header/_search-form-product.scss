@@ -1,0 +1,72 @@
+.site-header {
+  .item-full-height {
+    height: 100%;
+  }
+}
+.search-form-product {
+  position: relative;
+  width: 100%;
+
+  .product-cat-selector-search {
+    height: 44px;
+    margin-right: 5px;
+    background-color: #f5f5f5;
+    @include border-radius(4px);
+
+    .product-box-dropdown {
+      height: 100%;
+      width: 190px;
+      @include flexbox();
+      @include align-items(center);
+
+      .text-product {
+        padding: 0 15px;
+        cursor: pointer;
+        @include flex(1);
+      }
+      i {
+        position: relative;
+        top: -2px;
+        right: 10px;
+      }
+    }
+    .dropdown-menu {
+      padding: 0;
+      width: 100%;
+      border: none;
+      background-color: #f5f5f5;
+      @include border-radius(4px);
+
+      .item-product-cat {
+        display: block;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        @include transition(all 0.4s ease-in-out);
+
+        &:hover {
+          color: #ffffff;
+          background-color: $background-primary;
+        }
+      }
+    }
+  }
+  .search-field-product {
+    height: 44px;
+    width: 100%;
+    padding: 0 45px 0 25px;
+    border: none;
+    background-color: #f5f5f5;
+    @include border-radius(4px);
+  }
+  .btn-submit {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    height: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+}
