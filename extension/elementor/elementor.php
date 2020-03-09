@@ -54,7 +54,7 @@ final class dentistry_plugin_elementor_widgets {
             'post-grid',
             'post-carousel',
             'about-text',
-            'list-categories-product',
+//            'list-categories-product',
             'text-box',
             'testimonial',
             'product-carousel',

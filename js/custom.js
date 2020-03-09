@@ -89,6 +89,12 @@
         $( document ).general_owlCarousel_custom( '.site-post-slides' );
         /* End Gallery Single */
 
+        $( '.multi-languages ul li.lang-sel > a' ).on( 'click', function( event ) {
+
+            event.preventDefault();
+
+        });
+
     });
 
     $( window ).on( "load", function() {

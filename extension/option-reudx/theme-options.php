@@ -258,6 +258,35 @@ Redux::setSection( $dentistry_opt_name, array(
     'icon'              =>  'el el-arrow-up',
 ));
 
+// Header Top
+Redux::setSection( $dentistry_opt_name, array(
+    'title'         =>  esc_html__( 'Top', 'dentistry' ),
+    'id'            =>  'dentistry_header_top_config',
+    'desc'          =>  esc_html__( '', 'dentistry' ),
+    'subsection'    =>  true,
+    'fields'        =>  array(
+
+        array(
+            'id'        =>  'dentistry_header_top_show',
+            'type'      =>  'select',
+            'title'     =>  esc_html__( 'Show Header Top', 'dentistry' ),
+            'default'   =>  1,
+            'options'   =>  array(
+                1   =>  esc_html__( 'Yes', 'dentistry' ),
+                0   =>  esc_html__( 'No', 'dentistry' )
+            )
+        ),
+
+        array(
+            'id'    =>  'dentistry_header_top_select_page',
+            'type'  =>  'select',
+            'title' =>  esc_html__('Select Page', 'dentistry'),
+            'data'  =>  'pages',
+        ),
+
+    )
+));
+
 //Logo Config
 Redux::setSection( $dentistry_opt_name, array(
     'title'         =>  esc_html__( 'Logo', 'dentistry' ),
@@ -299,49 +328,6 @@ Redux::setSection( $dentistry_opt_name, array(
                 1   =>  esc_html__( 'Yes', 'dentistry' ),
                 0   =>  esc_html__( 'No', 'dentistry' )
             )
-        ),
-
-    )
-));
-
-// information
-Redux::setSection( $dentistry_opt_name, array(
-    'title'         =>  esc_html__( 'Information', 'dentistry' ),
-    'id'            =>  'dentistry_information_config',
-    'desc'          =>  esc_html__( '', 'dentistry' ),
-    'subsection'    =>  true,
-    'fields'        =>  array(
-
-        array(
-            'id'        =>  'dentistry_information_show_hide',
-            'type'      =>  'select',
-            'title'     =>  esc_html__( 'Show Or Hide Information', 'dentistry' ),
-            'default'   =>  1,
-            'options'   =>  array(
-                1   =>  esc_html__( 'Show', 'dentistry' ),
-                0   =>  esc_html__( 'Hide', 'dentistry' )
-            )
-        ),
-
-        array(
-            'id'        =>  'dentistry_information_address',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'Address', 'dentistry' ),
-            'default'   =>  '988782, Our Street, S State.',
-        ),
-
-        array(
-            'id'        =>  'dentistry_information_mail',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'Mail', 'dentistry' ),
-            'default'   =>  'info@domain.com',
-        ),
-
-        array(
-            'id'        =>  'dentistry_information_phone',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'Phone', 'dentistry' ),
-            'default'   =>  '+1 234 567 186',
         ),
 
     )

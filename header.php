@@ -18,6 +18,7 @@
 <?php
 
 get_template_part('template-parts/inc','loading');
+get_template_part('template-parts/header/inc','header-top');
 get_template_part('template-parts/header/inc','header');
 get_template_part( 'template-parts/navigation/inc', 'nav-top' );
 
