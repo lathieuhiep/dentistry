@@ -258,35 +258,6 @@ Redux::setSection( $dentistry_opt_name, array(
     'icon'              =>  'el el-arrow-up',
 ));
 
-// Header Top
-Redux::setSection( $dentistry_opt_name, array(
-    'title'         =>  esc_html__( 'Top', 'dentistry' ),
-    'id'            =>  'dentistry_header_top_config',
-    'desc'          =>  esc_html__( '', 'dentistry' ),
-    'subsection'    =>  true,
-    'fields'        =>  array(
-
-        array(
-            'id'        =>  'dentistry_header_top_show',
-            'type'      =>  'select',
-            'title'     =>  esc_html__( 'Show Header Top', 'dentistry' ),
-            'default'   =>  1,
-            'options'   =>  array(
-                1   =>  esc_html__( 'Yes', 'dentistry' ),
-                0   =>  esc_html__( 'No', 'dentistry' )
-            )
-        ),
-
-        array(
-            'id'    =>  'dentistry_header_top_select_page',
-            'type'  =>  'select',
-            'title' =>  esc_html__('Select Page', 'dentistry'),
-            'data'  =>  'pages',
-        ),
-
-    )
-));
-
 //Logo Config
 Redux::setSection( $dentistry_opt_name, array(
     'title'         =>  esc_html__( 'Logo', 'dentistry' ),
@@ -328,6 +299,53 @@ Redux::setSection( $dentistry_opt_name, array(
                 1   =>  esc_html__( 'Yes', 'dentistry' ),
                 0   =>  esc_html__( 'No', 'dentistry' )
             )
+        ),
+
+    )
+));
+
+// Header Top
+Redux::setSection( $dentistry_opt_name, array(
+    'title'         =>  esc_html__( 'Top', 'dentistry' ),
+    'id'            =>  'dentistry_header_top_config',
+    'desc'          =>  esc_html__( '', 'dentistry' ),
+    'subsection'    =>  true,
+    'fields'        =>  array(
+
+        array(
+            'id'        =>  'dentistry_header_top_show',
+            'type'      =>  'select',
+            'title'     =>  esc_html__( 'Show Header Top', 'dentistry' ),
+            'default'   =>  1,
+            'options'   =>  array(
+                1   =>  esc_html__( 'Yes', 'dentistry' ),
+                0   =>  esc_html__( 'No', 'dentistry' )
+            )
+        ),
+
+        array(
+            'id'    =>  'dentistry_header_top_select_page',
+            'type'  =>  'select',
+            'title' =>  esc_html__('Select Page', 'dentistry'),
+            'data'  =>  'pages',
+        ),
+
+    )
+));
+
+// information
+Redux::setSection( $dentistry_opt_name, array(
+    'title'         =>  esc_html__( 'Information', 'dentistry' ),
+    'id'            =>  'dentistry_information_config',
+    'desc'          =>  esc_html__( '', 'dentistry' ),
+    'subsection'    =>  true,
+    'fields'        =>  array(
+
+        array(
+            'id'        =>  'dentistry_information_phone',
+            'type'      =>  'text',
+            'title'     =>  esc_html__( 'Phone', 'dentistry' ),
+            'default'   =>  '+1 234 567 186',
         ),
 
     )
@@ -489,7 +507,7 @@ Redux::setSection( $dentistry_opt_name, array(
             'output'    =>  '.breadcrumbs .breadcrumbs-col',
             'type'      =>  'background',
             'clone'     =>  'true',
-            'title'     =>  esc_html__( 'Background Shop', 'basictheme' ),
+            'title'     =>  esc_html__( 'Background Shop', 'dentistry' ),
         ),
 
         array(

@@ -126,6 +126,10 @@
           @include flex(0 0 auto);
         }
       }
+      .woocommerce-mini-cart__empty-message {
+        color: $color-primary;
+        font-weight: 400;
+      }
     }
   }
   &:hover {
