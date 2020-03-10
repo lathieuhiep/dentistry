@@ -141,6 +141,34 @@ endif;
 
 add_filter('woocommerce_show_page_title', '__return_false');
 
+function dentistry_yith_woo_meta() {
+
+?>
+
+    <div class="yith-woo-meta d-flex justify-content-center">
+        <?php
+        if ( function_exists( 'yith_wishlist_constructor' ) ) :
+            echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
+        endif;
+
+        if ( function_exists( 'yith_woocompare_constructor' ) ) :
+            echo do_shortcode( '[yith_compare_button]' );
+        endif;
+
+        if ( function_exists( 'yith_wcqv_init' ) ) :
+            ?>
+
+            <div class="yith-wcwl-quick_view">
+                <?php echo do_shortcode( '[yith_quick_view product_id="'. esc_attr( get_the_ID() ) .'" type="button"]' ); ?>
+            </div>
+
+        <?php endif; ?>
+    </div>
+
+<?php
+
+}
+
 /*
 * Lay Out Shop
 */
@@ -356,6 +384,8 @@ if ( ! function_exists( 'dentistry_woo_after_shop_loop_item' ) ) :
      * @hooked dentistry_woo_after_shop_loop_item - 15
      */
     function dentistry_woo_after_shop_loop_item() {
+
+        dentistry_yith_woo_meta();
     ?>
 
         </div><!-- .site-shop__product--item -->

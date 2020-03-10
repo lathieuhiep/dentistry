@@ -373,16 +373,31 @@ class dentistry_widget_product_carousel extends Widget_Base {
                     <?php
                     while ( $query->have_posts() ):
                         $query->the_post();
+
+                        global $product;
+                        $review_count = $product->get_review_count();
                     ?>
 
                         <div class="item-product woocommerce d-flex flex-column flex-grow-1">
-                            <div class="img-product">
+                            <div class="img-product flex-grow-1">
                                 <?php the_post_thumbnail( 'large' ); ?>
 
                                 <?php woocommerce_show_product_loop_sale_flash(); ?>
                             </div>
 
-                            <div class="item-content text-center d-flex flex-column flex-grow-1">
+                            <div class="item-content d-flex flex-column align-items-center justify-content-center">
+                                <?php
+                                if ( $review_count > 0 ) :
+                                    woocommerce_template_loop_rating();
+                                else:
+                                ?>
+
+                                <div class="reviews-content">
+                                    <div class="star"></div>
+                                </div>
+
+                                <?php endif; ?>
+
                                 <h3 class="title-product">
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>">
                                         <?php the_title(); ?>
@@ -397,6 +412,8 @@ class dentistry_widget_product_carousel extends Widget_Base {
                                     <?php woocommerce_template_loop_add_to_cart(); ?>
                                 </div>
                             </div>
+
+                            <?php dentistry_yith_woo_meta(); ?>
                         </div>
 
                     <?php endwhile; wp_reset_postdata(); ?>

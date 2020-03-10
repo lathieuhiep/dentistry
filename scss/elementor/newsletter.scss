@@ -1,0 +1,57 @@
+.element-newsletter {
+  padding: 40px 28px;
+  border: 2px solid $background-primary;
+  @include border-radius(4px);
+
+  .title {
+    font-size: 15px;
+    font-weight: 400;
+    color: $color-link;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+  }
+  .sub-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-primary;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  i {
+    font-size: 20px;
+    color: #222222;
+    margin-bottom: 15px;
+  }
+  .content {
+    form {
+      input {
+        padding: 0 5px;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        font-size: 12px;
+        border: 1px solid #cecece;
+        @include border-radius(4px);
+
+      }
+      .tnp-field-button {
+        margin-top: 10px;
+
+        input[type="submit"] {
+          background-color: #333;
+          border-color: #333;
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: 700;
+          cursor: pointer;
+          @include transition(all 0.4s ease-in-out);
+
+          &:hover {
+            color: #333333;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

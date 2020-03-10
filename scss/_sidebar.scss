@@ -21,7 +21,6 @@ aside {
   .widget {
     border: 1px solid $border-color;
     @include border-radius(4px);
-    overflow: hidden;
 
     .widget-title {
       padding: 15px 20px;
@@ -44,6 +43,134 @@ aside {
     .tagcloud {
       padding: 0;
     }
+    &.woocommerce.widget_product_categories,
+    &.widget_nav_menu,
+    &.widget_categories {
+      > ul {
+        > li {
+          &.cat-parent {
+            > a {
+              &:after {
+                position: absolute;
+                content: "\f0da";
+                top: 50%;
+                right: 0;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                @include transform(translateY(-50%));
+              }
+            }
+          }
+          a {
+            background-position: left -630px;
+          }
+          &:hover {
+            background-color: $background-hover;
+
+            > a {
+              color: #ffffff;
+              background-position: left -694px;
+            }
+          }
+          &:hover {
+            > ul {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+      ul {
+        margin: 0;
+        padding: 5px 5px 15px;
+        list-style: none;
+
+        > li {
+          @include border-radius(4px);
+
+          > a {
+            padding: 9px 16px 8px 20px;
+          }
+        }
+        li {
+          position: relative;
+          margin: 0;
+          padding: 0 15px;
+          border-bottom: 0;
+
+          a {
+            position: relative;
+            display: block;
+            text-transform: capitalize;
+            background-image: url("images/icon_general.png");
+            background-repeat: no-repeat;
+            @include transition(all 0 ease-in-out);
+            @include transition-duration(0s);
+          }
+          ul {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            min-width: 180px;
+            z-index: 10;
+            padding: 25px 0;
+            opacity: 0;
+            visibility: hidden;
+            background: #ffffff;
+            @include border-radius(4px);
+            @include box-shadow(0 0 7px 0 #acacac);
+
+            li {
+              padding: 0 20px 0 30px;
+
+              &.cat-parent {
+                > a {
+                  &:after {
+                    position: absolute;
+                    content: "\f105";
+                    top: 50%;
+                    right: 0;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    @include transform(translateY(-50%));
+                  }
+                }
+              }
+              a {
+                display: block;
+                padding: 5px 0 5px 18px;
+                white-space: nowrap;
+                background-position: left -634px;
+              }
+              ul {
+                @include transform(scale(0));
+                @include transition(all 0.4s ease-in-out);
+              }
+              &:hover {
+                ul {
+                  opacity: 1;
+                  visibility: visible;
+                  @include transform(scale(1));
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+    &.widget_nav_menu {
+      > div {
+        padding: 0;
+      }
+       ul {
+        > li {
+           a {
+            background-position: left -630px;
+          }
+        }
+      }
+    }
   }
 }
 section {
@@ -61,18 +188,13 @@ section {
     ul {
       list-style: none;
       margin: 0;
+      padding: 15px 30px;
 
       li {
-        border-bottom: 1px solid #eee;
-        padding-top: 10px;
-        padding-bottom: 10px;
+       padding: 0 0 10px;
 
-        &:first-child {
-          padding-top: 0;
-        }
         &:last-child {
           padding-bottom: 0;
-          border-bottom: none;
         }
         a {
           display: block;

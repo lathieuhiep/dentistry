@@ -39,6 +39,8 @@ remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_pr
 
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
+remove_action( 'woocommerce_after_shop_loop_item', 'yith_add_quick_view_button', 15 );
+
 add_action( 'dentistry_woo_shopping_cart', 'dentistry_get_cart', 5 );
 
 add_action( 'dentistry_woo_breadcrumbs', 'dentistry_woo_get_breadcrumbs', 5 );
@@ -90,4 +92,3 @@ add_action( 'woocommerce_single_product_summary', 'dentistry_post_share', 45 );
 add_action( 'woocommerce_after_single_product_summary', 'dentistry_woo_after_single_product_summary_close_warp', 5 );
 
 add_action( 'woocommerce_after_single_product', 'dentistry_woo_after_single_product', 30 );
-

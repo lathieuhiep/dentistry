@@ -60,7 +60,8 @@ final class dentistry_plugin_elementor_widgets {
             'product-carousel',
             'best-selling-products',
             'product-brands',
-            'contact-us'
+            'contact-us',
+            'newsletter-shortcode'
         ];
         
         foreach ( $build_widgets_filename as $widget_filename ) :
