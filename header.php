@@ -26,9 +26,7 @@ get_template_part( 'template-parts/navigation/inc', 'nav-top' );
 <!--End Loading Template-->
 
 <div id="back-top">
-    <a href="#">
-        <i class="fa fa-chevron-up"></i>
-    </a>
+    <a href="#"></a>
 </div>
 
 <!--Start Sticky Footer-->

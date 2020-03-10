@@ -121,21 +121,28 @@ button {
 #back-top {
   background-color: $background-hover;
   opacity: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   bottom: 0;
   cursor: pointer;
   position: fixed;
-  right: 15px;
+  right: 85px;
   z-index: 1000;
+  overflow: hidden;
+  @include border-radius(50%);
   @include transition(all 0.4s ease-in-out);
 
   a {
     display: block;
     color: #ffffff;
-    line-height: 40px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     text-decoration: none;
+    background-image: url("images/icon_general.png");
+    background-repeat: no-repeat;
+    background-position: -12px -518px;
     @include transition(all 0.25s ease-in-out);
   }
   &.active_top {
