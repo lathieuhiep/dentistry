@@ -46,6 +46,34 @@
             })
 
         }
+
+        let menu_widget_has_child = $( '.elementor-widget-wp-widget-woocommerce_product_categories .elementor-widget-container ul li.cat-parent, aside .widget.woocommerce.widget_product_categories ul li.cat-parent, aside .widget.widget_nav_menu ul li.menu-item-has-children' );
+
+        if ( menu_widget_has_child.length ) {
+
+            menu_widget_has_child.find( '> a' ).after( "<span class='icon-menu-parent d-lg-none'></span>" );
+
+            let icon_menu_item_mobile  =   $( '.icon-menu-parent' );
+
+            icon_menu_item_mobile.each( function () {
+
+                $(this).on( 'click', function () {
+
+                    $(this).toggleClass( 'active' );
+
+                    $(this).parents( '.cat-parent' ).siblings().find( '.icon-menu-parent' ).removeClass( 'active' );
+                    $(this).parent().children( '.children' ).slideToggle();
+                    $(this).parents( '.cat-parent' ).siblings().find( '.children' ).slideUp();
+
+                    $(this).parents( '.menu-item-has-children' ).siblings().find( '.icon-menu-parent' ).removeClass( 'active' );
+                    $(this).parent().children( '.sub-menu' ).slideToggle();
+                    $(this).parents( '.menu-item-has-children' ).siblings().find( '.sub-menu' ).slideUp();
+
+                } )
+
+            } )
+
+        }
         /* btn mobile End */
 
         /* Start product select search */

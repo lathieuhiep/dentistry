@@ -149,6 +149,35 @@
     }
   }
 }
+.icon-menu-parent {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  width: 40px;
+  height: 39px;
+  text-align: center;
+  line-height: 39px;
+  font-size: 15px;
+  color: #777777;
+  cursor: pointer;
+  background-color: #111;
+  z-index: 15;
+
+  &:after {
+    content: "\f067";
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+  &.active {
+    color: #ffffff;
+    background-color: $background-primary;
+
+    &:after {
+      content: "\f068";
+    }
+  }
+}
 .header-search {
   position: relative;
   margin-left: 15px;

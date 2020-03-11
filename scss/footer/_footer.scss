@@ -25,14 +25,16 @@
             &:before {
               position: absolute;
               content: "";
-              top: 50%;
+              top: 10px;
               left: 0;
               width: 4px;
               height: 4px;
               margin-right: 10px;
               background-color: #555;
               @include border-radius(50%);
-              @include transform(translateY(-50%));
+            }
+            ul {
+              padding-left: 0;
             }
           }
         }

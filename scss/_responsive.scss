@@ -243,6 +243,93 @@
       }
     }
   }
+  .elementor-widget-wp-widget-woocommerce_product_categories .elementor-widget-container,
+  aside .widget.woocommerce.widget_product_categories,
+  aside .widget.widget_nav_menu {
+    ul {
+      > li {
+        &:hover {
+          background-color: transparent;
+
+          > a {
+            color: $color-link;
+          }
+        }
+      }
+      li {
+        &.cat-parent,
+        &.menu-item-has-children {
+          > a {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    ul {
+      padding: 0;
+      background-color: #444444;
+
+      > li {
+        > a {
+          padding: 10px 50px 10px 20px;
+          color: #ffffff;
+          @include box-shadow(0 1px 0 0 #555);
+        }
+      }
+      li {
+        padding: 0;
+
+        a {
+          background-image: none;
+        }
+        ul {
+          display: none;
+          position: static;
+          opacity: 1;
+          visibility: visible;
+          padding: 0;
+          background-color: transparent;
+          @include box-shadow(none);
+          @include transition-duration(0s);
+
+          li {
+            padding: 0;
+
+            a {
+              padding: 10px 50px 10px 20px;
+            }
+            ul {
+              @include transform(scale(1));
+              @include transition-duration(0s);
+            }
+            &:hover {
+              > a {
+                color: $color-link;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  aside {
+    .widget {
+      &.woocommerce {
+        &.widget_product_categories {
+          .widget-title {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &.widget_nav_menu {
+        .widget-title {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 
 }
 
@@ -298,6 +385,15 @@
 
 @media ( max-width: 767px ) {
 
+  .header-top {
+    .header-top_right {
+      .multi-languages {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
   .site-header {
     margin-bottom: 15px;
   }

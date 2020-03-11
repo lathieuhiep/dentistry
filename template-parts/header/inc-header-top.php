@@ -11,9 +11,9 @@ $select_page   =   $dentistry_options['dentistry_header_top_select_page'];
 
 <div class="header-top">
     <div class="container">
-        <div class="warp d-sm-flex justify-content-sm-between">
+        <div class="warp d-flex justify-content-between">
             <div class="header-top_left">
-                <p>
+                <div class="box-login-register">
                     <?php
                     if ( is_user_logged_in() ) :
 
@@ -29,29 +29,33 @@ $select_page   =   $dentistry_options['dentistry_header_top_select_page'];
 
                     <?php else: ?>
 
-                        <?php esc_html_e( 'Xin chào khách hàng, bạn có thể', 'dentistry' ); ?>
+                        <div class="box-register">
+                            <span class="text d-none d-md-inline-block">
+                                <?php esc_html_e( 'Xin chào khách hàng, bạn có thể', 'dentistry' ); ?>
+                            </span>
 
-                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php esc_attr_e( 'Đăng nhập','dentistry' ); ?>">
-                            <?php esc_html_e( 'đăng nhập', 'dentistry' ); ?>
-                        </a>
+                            <a class="text-login" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php esc_attr_e( 'Đăng nhập','dentistry' ); ?>">
+                                <?php esc_html_e( 'đăng nhập', 'dentistry' ); ?>
+                            </a>
 
-                        <?php esc_html_e( 'hoặc', 'dentistry' ); ?>
+                            <?php esc_html_e( 'hoặc', 'dentistry' ); ?>
 
-                        <a href="<?php echo get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ); ?>" title="<?php esc_attr_e( 'Đăng kí','dentistry' ); ?>">
-                            <?php esc_html_e( 'đăng kí', 'dentistry' ); ?>
-                        </a>
+                            <a class="text-register" href="<?php echo get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ); ?>" title="<?php esc_attr_e( 'Đăng kí','dentistry' ); ?>">
+                                <?php esc_html_e( 'đăng kí', 'dentistry' ); ?>
+                            </a>
+                        </div>
 
                     <?php endif; ?>
-                </p>
+                </div>
             </div>
 
             <div class="header-top_right d-flex">
-                <a class="location d-flex flex-grow-1 align-items-center" href="<?php echo esc_url( get_page_link( $select_page ) ); ?>">
+                <a class="location d-none d-md-flex flex-md-grow-1 align-items-md-center" href="<?php echo esc_url( get_page_link( $select_page ) ); ?>">
                     <i class="fas fa-map-marker-alt"></i>
                     <?php esc_html_e( 'Vị trí cửa hàng', 'dentistry' ); ?>
                 </a>
 
-                <div class="account-box d-flex flex-grow-1 align-items-center">
+                <div class="account-box d-none d-md-flex flex-md-grow-1 align-items-md-center">
                     <a class="account d-flex align-items-center" href="<?php echo get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ); ?>">
                         <i class="fas fa-user"></i>
                         <?php esc_html_e( 'Tài khoản', 'dentistry' ); ?>
